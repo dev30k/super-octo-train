@@ -81,11 +81,18 @@ func (ll *LinkedList) DeleteEnd(value interface{}){
 		return 
 		
 	}
+	if ll.Head.Next == nil{
+		ll.Head = nil
+		return
+	}
 	current := ll.Head
 
-	for current != nil{
-		
+	for current.Next.Next != nil{
+		current= current.Next
+
+
 	}
+	current.Next = nil
 
 
 }
