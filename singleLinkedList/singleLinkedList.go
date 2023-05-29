@@ -95,10 +95,10 @@ func (ll *LinkedList) DeletePosition(position int) {
 	if ll.Head.Next == nil {
 		return
 	}
-	if position <= 0 {
+	if position < 0 {
 		return
 	}
-	if position == 1 {
+	if position == 0 {
 		ll.Head = ll.Head.Next
 		return
 	}
